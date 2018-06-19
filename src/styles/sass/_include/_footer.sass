@@ -1,0 +1,149 @@
+footer
+	background: $white
+	padding-top: 30px
+	.footer-subscribe
+		+flexbox
+		background: $dyellow
+		padding: 20px 25px
+		justify-content: space-between
+		align-items: center
+		align-content: center
+		+media-breakpoint-down(md)
+			flex-wrap: wrap
+		.subscribe
+			+flexbox
+			align-items: center
+			align-content: center
+			+media-breakpoint-down(md)
+				width: 100%
+				max-width: 500px
+				flex-wrap: wrap
+				display: block
+				margin: 15px auto
+			.module-title 
+				+fs(18rem)
+				font-weight: 500
+				text-transform: uppercase
+				color: $white
+				margin-right: 60px
+				+media-breakpoint-down(lg)
+					+fs(15rem)
+				+media-breakpoint-down(md)
+					width: 100%
+					text-align: center
+					margin-right: 0
+			.subscribefrm
+				width: 480px
+				+flexbox
+				padding: 1px
+				+bor-rad(50px)
+				overflow: hidden
+				background: $white
+				+media-breakpoint-down(lg)
+					width: 400px
+				+media-breakpoint-down(md)
+					width: 100%
+				input
+					line-height: 38px
+					padding: 0 20px
+					margin: 0
+					width: calc(100% - 38px)
+					+fs(14rem)
+					color: darken($white,60%)
+					background: none
+					border: none
+				.subscribebutton
+					width: 38px
+					height: 38px
+					line-height: 38px
+					text-align: center
+					color: $white
+					background: linear-gradient(135deg,#d8ac0b, #a96001)
+					+bor-rad(50px)
+					+fs(0)
+					&:before
+						content: '\f105'
+						+fs(18rem)
+					&:hover
+						filter: brightness(110%)
+		.social
+			+flexbox
+			+media-breakpoint-down(md)
+				justify-content: center
+				width: 100%
+			a
+				width: 32px
+				height: 32px
+				line-height: 32px
+				text-align: center
+				+bor-rad(50px)
+				background: #b78908
+				color: darken($white,5%)
+				+ a
+					margin-left: 10px
+				&:hover
+					background: $white
+					color: $dyellow
+	.footer-main
+		padding: 30px 0 0
+		.footer-col
+			margin-bottom: 30px
+			.title
+				+fs(15rem)
+				color: darken($white,60%)
+				font-weight: 500
+				text-transform: uppercase
+				margin-bottom: 15px
+			.contact-info
+				+fs(14rem)
+				li
+					padding-left: 20px
+					+pos(rel,null)
+					color: darken($white,50%)
+					line-height: 1.5
+					.fa
+						+pos(abs, 2px null null 0)
+			.footer-link
+				margin-bottom: 10px
+				a
+					color: darken($white,50%)
+					+fs(14rem)
+					line-height: 1.5
+					&:hover
+						color: $dyellow
+						font-weight: 500
+	.copyright
+		background: darken($white,20%)
+		color: darken($white,60%)
+		padding: 20px 0
+		+fs(14rem)
+		text-align: center
+
+.up
+	+pos(fix, null 15px 15px null)
+	width: 40px
+	height: 40px
+	+bor-rad(50px)
+	background: $lyellow
+	color: $white
+	z-index: 50
+	+flexbox
+	justify-content: center
+	align-items: center
+	+fs(20rem)
+	cursor: pointer
+	+transform(translateY(50%))
+	opacity: 0
+	visibility: 0
+	+transition(all,0.5s)
+	+media-breakpoint-down(md)
+		bottom: 70px
+		right: 15px
+	&:before
+		content: '\f106'
+	&:hover
+		background: $dyellow
+	&.active
+		+transform(translateY(0))
+		opacity: 1
+		visibility: 1

@@ -1,0 +1,25 @@
+
+.sidebar-category
+	margin: 40px 0px
+	background: darken($white,3%)
+	> ul 
+		padding: 10px 15px
+		> li 
+			+pos(rel,null)
+			> a 
+				display: block
+				color: darken($white,40%)
+				// font-weight: 700
+				+fs(14rem)
+				+pos(rel,null)
+				padding: 2px 0
+				&:before
+					content: '\f105'
+					margin-right: 10px
+			&:hover
+				> a 
+					color: $black
+			&.active
+				> a 
+					color: $dyellow
+					font-weight: 600
